@@ -1,29 +1,18 @@
-const
-    // labels 
-    dayLabel = document.getElementById("ddLabel"),
+const dayLabel = document.getElementById("ddLabel"),
     monthLabel = document.getElementById("mmLabel"),
     yearLabel = document.getElementById("yyyyLabel"),
-
-    //  Error labels
     dayErr = document.querySelector("#ddErr"),
     monthErr = document.querySelector("#mmErr"),
     yearErr = document.querySelector("#yyyyErr"),
-
-    // inputs
     dayInput = document.querySelector("#dayInput"),
     monthInput = document.querySelector("#monthInput"),
     yearInput = document.querySelector("#yearInput"),
-
-    // outputs
     dayOutput = document.querySelector("#day"),
     monthOutput = document.querySelector("#month"),
     yearOutput = document.querySelector("#year"),
-
-    // others
     actionBtn = document.querySelector("#actionBtn");
 
-let
-    today = new Date(),
+let today = new Date(),
     birthday,
     dayVal,
     monthVal,
@@ -38,8 +27,6 @@ function addAnim(input) {
 function resetAnim(input) {
     if (input.classList.contains("animClass")) {
         input.classList.remove("animClass");
-        // dayInput.classList.remove("inputErr");
-
     }
 }
 
@@ -87,7 +74,6 @@ function yearValidator() {
         yearInput.classList.remove("inputErr");
         yearLabel.classList.remove("labelErr");
         year = yearInput.value; ``;
-        // console.log(year);
         yearErr.innerHTML = "";
     }
 }
